@@ -1,0 +1,22 @@
+{
+  "name": "simple-crud-app",
+  "version": "1.0.0",
+  "description": "Simple CRUD app using Node.js, Express and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukenolancs/Simple-CRUD-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukenolancs/Simple-CRUD-app/issues"
+  },
+  "homepage": "https://github.com/lukenolancs/Simple-CRUD-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
