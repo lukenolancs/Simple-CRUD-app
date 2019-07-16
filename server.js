@@ -12,3 +12,6 @@ app.get('/', (req, res) => {
 })
 
 
+app.post('/names', (req,res) => {
+	console.log('Woo!');
+})
