@@ -25,17 +25,19 @@ MongoClient.connect(MONGOURL, (err, client) => {
 
 //Allow the use of the body parser
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.set('view engine', 'ejs');
 
 //Get the homepage at route / (index.html)
 app.get('/', (req, res) => {
 
-	var cursor = db.collection('quotes').find().toArray(function(err, res) {
-		console.log(res);
-	})
-	
+	var cursor = db.collection('firstAndLastName').find().toArray(function(err, result) {
+		
+		if (err) {
+			console.error(err);
+		}
 
-	res.sendFile(__dirname +  '/index.html');
+		res.render('index.ejs', {usernames: result});
+	})
 })
 
 

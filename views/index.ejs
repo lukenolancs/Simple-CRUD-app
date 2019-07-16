@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+	Enter First and Last Name
+
+
+<ul class="usernames">
+  <% for(var i=0; i<usernames.length; i++) {%>
+    <li class="usernames">
+      <span><%= usernames[i].first %></span>
+      <span><%= usernames[i].last %></span>
+    </li>
+  <% } %>
+</ul>
+
+
+ <form action="/names" method="POST">
+    <input type="text" placeholder="First Name" name="first">
+    <input type="text" placeholder="Last Name" name="last">
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
